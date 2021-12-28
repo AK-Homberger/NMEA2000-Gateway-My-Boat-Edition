@@ -68,7 +68,7 @@ The navigatio web page shows essetial naigationl data received from the NMEA2000
 ![Navigation](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/Navigation.png)
 
 
-The poer control web page shows information regardin the Board Voltage (12Volt), the fridge remperatur and the mains power status.
+The power control web page shows information regardin the Board Voltage (12Volt), the fridge remperatur and the mains power status. You can also reset the power usage value to zero.
 
 ![Power](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/PowerControl.png)
 
