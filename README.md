@@ -8,7 +8,7 @@ The same hardware and PCB as for the Gateway is used. We only need one addional 
 
 And of course the Sofoff POW and a Tasmota switch to control the heater. That's all.
 
-To adjust the program too your needs you can change the settings in the sketch:
+To adjust the program to your needs you can change the settings in the sketch:
 ```
 //****************************************************************************************
 // Configuration start
