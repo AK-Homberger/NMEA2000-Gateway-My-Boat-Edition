@@ -1,6 +1,13 @@
 # NMEA2000 WiFi-Gateway - My Boat Edition
 
+This project is a combination of three of mine other GitHub projects. It combine the [NMEA2000 WiFi-Gateway](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) with the Sonoff/Tasmota [power meter](https://github.com/AK-Homberger/M5Stack-Sonoff-Power-Display) and the [heater control](https://github.com/AK-Homberger/WLAN-Controlled-Heater-Thermostat-for-Tasmota-switch) project.
 
+The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. 
+The same hardware and PCB as for the Gateway is used. We only need one addional DS18B20 temperature sensor for the room temperature.
+
+And of course the Sofoff POW and a Tasmota switch to control the heater. That's all.
+
+To adjust the program too your needs you can change the settings in the sketch:
 ```
 //****************************************************************************************
 // Configuration start
@@ -40,6 +47,8 @@ const char* TasmotaIP = "192.168.15.200"; // Defines address of Tasmota heater s
 // Configuration end
 //****************************************************************************************
 ```
+
+
 
 ![MainPage](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/MainPage.png)
 
