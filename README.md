@@ -6,7 +6,7 @@ The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-
 
 The same hardware and PCB as for the Gateway is used. We only need one addional DS18B20 temperature sensor for the room temperature.
 
-And of course the Sofoff POW and a Tasmota switch to control the heater. That's all.
+And of course the Sonoff POW R2 and a Tasmota switch to control the heater. That's all.
 
 To adjust the program to your needs you can change the settings in the sketch:
 ```
