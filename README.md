@@ -63,16 +63,16 @@ With this main page you can access the other web pages to:
 - Show wind information (big)
 
 
-The navigatio web page shows essetial naigationl data received from the NMEA2000 network. No additional client app is needed on the phone/tablet or laptop.
+The navigatio web page shows essetial navigational data received from the NMEA2000 network. No additional client app is needed on the phone/tablet or laptop.
 
 ![Navigation](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/Navigation.png)
 
 
-The power control web page shows information regardin the Board Voltage (12Volt), the fridge remperatur and the mains power status. You can also reset the power usage value to zero.
+The power control web page shows information regarding the Board Voltage (12Volt), the fridge remperatur and the Mains Power status.
 
 ![Power](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/PowerControl.png)
 
-You can also switch on/off the alarm for mains power losses.
+You can also switch on/off the alarm for mains power losses. You can also reset the power usage value to zero.
 
 ![Heater](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/HeaterControl.png)
 
