@@ -4,9 +4,10 @@ This project is a combination of three of mine other GitHub projects. It combine
 
 The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. 
 
-The same hardware and PCB as for the gateway is used. We only need one addional DS18B20 temperature sensor for the room temperature.
+The same hardware and PCB as for the gateway is used. We only need one additional DS18B20 temperature sensor for the room temperature.
 
 And of course the Sonoff POW R2 and a Tasmota switch to control the heater. That's all.
+On both devices the Tasmota software has to be installed. For details please have a look to the individual GitHub project pages.
 
 To adjust the program to your needs, you can change the settings in the sketch:
 ```
@@ -68,7 +69,7 @@ The navigation web page shows essential navigational data received from the NMEA
 ![Navigation](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/Navigation.png)
 
 
-The power control web page shows information regarding the board voltage (12Volt), the fridge temperatur and the mains power values.
+The power control web page shows information regarding the board voltage (12 Volt), the fridge temperatur and the mains power values.
 
 ![Power](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/PowerControl.png)
 
