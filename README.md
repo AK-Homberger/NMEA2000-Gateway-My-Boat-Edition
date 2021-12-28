@@ -4,11 +4,11 @@ This project is a combination of three of mine other GitHub projects. It combine
 
 The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. 
 
-The same hardware and PCB as for the Gateway is used. We only need one addional DS18B20 temperature sensor for the room temperature.
+The same hardware and PCB as for the gateway is used. We only need one addional DS18B20 temperature sensor for the room temperature.
 
 And of course the Sonoff POW R2 and a Tasmota switch to control the heater. That's all.
 
-To adjust the program to your needs you can change the settings in the sketch:
+To adjust the program to your needs, you can change the settings in the sketch:
 ```
 //****************************************************************************************
 // Configuration start
@@ -49,9 +49,9 @@ const char* TasmotaIP = "192.168.15.200"; // Defines address of Tasmota heater s
 //****************************************************************************************
 ```
 
-It's important to configure the Sonoff POW R2 and the Tasmota heater switch with the above defined IP adresses. I'm using the sketch as Access Point and in that case no changes to IP adresses in the sketch should be necessary. If you want to use it as a client in an existing WLAN, you have to change the IP adresses according to your local needs.
+It's important to configure the Sonoff POW R2 and the Tasmota heater switch with the above defined IP adresses. I'm using the sketch as Access Point and in that case no changes of IP adresses in the sketch should be necessary. If you want to use it as a client in an existing WLAN, you have to change the IP adresses according to your local needs.
 
-The sketch is implementing mDNS and the Bonjour protocol. In a web clinet you can simply provide the name "gateway.local". Then the initial web site is shown:
+The sketch is implementing mDNS and the Bonjour protocol. In a web client you can simply provide the name "gateway.local". Then the initial web page is shown:
 
 ![MainPage](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/MainPage.png)
 
@@ -63,17 +63,42 @@ With this main page you can access the other web pages to:
 - Show wind information (big)
 
 
-The navigatio web page shows essetial navigational data received from the NMEA2000 network. No additional client app is needed on the phone/tablet or laptop.
+The navigation web page shows essential navigational data received from the NMEA2000 network. No additional client app is needed on the phone/tablet or laptop.
 
 ![Navigation](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/Navigation.png)
 
 
-The power control web page shows information regarding the Board Voltage (12Volt), the fridge remperatur and the Mains Power status.
+The power control web page shows information regarding the board voltage (12Volt), the fridge temperatur and the mains power values.
 
 ![Power](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/PowerControl.png)
 
-You can also switch on/off the alarm for mains power losses. You can also reset the power usage value to zero.
+You can also switch on/off the alarm for mains power losses. And you can also reset the power usage value to zero.
 
+With the heater control page you can control the heater.
 ![Heater](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/HeaterControl.png)
 
+You can set the thermostat temperature and the state (Auto, On, Off).
+
+In addition to the fridge temperature we use an additional DS18B20 sensor to measure the room temperature. Just connect the new sensor in üparallel to the first sensor.
+In the sketch you have to define which sensor is providing which temperature:
+
+```
+tmp = sensors.getTempCByIndex(1);      // First sensor
+    if (tmp != -127) {
+      if (abs(FTO - tmp) < 1) FridgeTemp = tmp;
+      FTO = tmp;
+    }
+
+    tmp = sensors.getTempCByIndex(0);       // Second sensor
+    if (tmp != -127) {
+      if (abs(RTO - tmp) < 1) RoomTemp = tmp;
+      RTO = tmp;
+    }
+```
+
+Just set the index in "sensors.getTempCByIndex(1)" to "0" or "1". It would be possible to identify the individual sensor by the unique ID. But for only two sensors it's easier to just try out the two options with the index.
+
+
+The last page is just showing the current AWS and the maximum wind speed.
 ![Wind](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/AWS-Big.png)
+
