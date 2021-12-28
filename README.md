@@ -79,9 +79,10 @@ With the heater control page you can control the heater.
 ![Heater](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/HeaterControl.png)
 
 You can set the thermostat temperature and the state (Auto, On, Off).
+In Auto mode the Gateway is controling the temperature by switching the heater on/off depending on the cabin temperature.
 
-In addition to the fridge temperature we use an additional DS18B20 sensor to measure the room temperature. Just connect the new sensor in üparallel to the first sensor.
-In the sketch you have to define which sensor is providing which temperature:
+In addition to the fridge temperature we use an additional DS18B20 sensor to measure the cabin temperature. Just connect the new sensor in parallel to the first sensor.
+In the sketch you have to define, which sensor is providing which temperature:
 
 ```
 tmp = sensors.getTempCByIndex(1);      // First sensor
