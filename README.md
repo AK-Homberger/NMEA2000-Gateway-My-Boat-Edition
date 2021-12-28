@@ -1,5 +1,46 @@
 # NMEA2000 WiFi-Gateway - My Boat Edition
 
+
+```
+//****************************************************************************************
+// Configuration start
+
+#define ENABLE_DEBUG_LOG 0          // Debug log, set to 1 to enable AIS forward on USB-Serial / 2 for ADC voltage to support calibration
+#define UDP_Forwarding 0            // Set to 1 for forwarding AIS from serial2 to UDP brodcast
+#define HighTempAlarm 12            // Alarm level for fridge temperature (higher)
+#define LowVoltageAlarm 11.5        // Alarm level for battery voltage (lower)
+#define ADC_Calibration_Value 34.3  // The real value depends on the true resistor values for the ADC input (100K / 27 K)
+#define WLAN_CLIENT 0               // Set to 1 to enable client network. 0 to act as AP only
+
+// Wifi cofiguration Client and Access Point
+const char *AP_ssid = "MyESP32";        // ESP32 as AP
+const char *CL_ssid = "MyWLAN";         // ESP32 as client in network
+
+const char *AP_password = "password";   // AP password
+const char *CL_password = "password";   // Client password
+
+// Put IP address details here
+IPAddress AP_local_ip(192, 168, 15, 1); // Static address for AP
+IPAddress AP_gateway(192, 168, 15, 1);
+IPAddress AP_subnet(255, 255, 255, 0);
+
+IPAddress CL_local_ip(192, 168, 1, 10); // Static address for Client Network. Please adjust to your AP IP and DHCP range!
+IPAddress CL_gateway(192, 168, 1, 1);
+IPAddress CL_subnet(255, 255, 255, 0);
+
+const uint16_t ServerPort = 2222; // Define the TCP port, where server sends data. Use this e.g. on OpenCPN. Use 39150 for Navionis AIS
+
+// UPD broadcast for Navionics, OpenCPN, etc.
+const char* udpAddress = "192.168.15.255"; // UDP broadcast address. Must be in the network of the ESP32
+const int udpPort = 2000; // port 2000
+
+const char* POW_IP = "192.168.15.210";    // Server IP. Set Sonoff POW to fixed IP
+const char* TasmotaIP = "192.168.15.200"; // Defines address of Tasmota heater switch
+
+// Configuration end
+//****************************************************************************************
+```
+
 ![MainPage](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/MainPage.png)
 
 ![Navigation](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/Navigation.png)
