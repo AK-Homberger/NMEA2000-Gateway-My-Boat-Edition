@@ -51,7 +51,7 @@ const char* TasmotaIP = "192.168.15.200"; // Defines address of Tasmota heater s
 
 It's important to configure the Sonoff POW R2 and the Tasmota heater switch with the above defined IP adresses. I'm using the sketch as Access Point and in that case no changes to IP adresses in the sketch should be necessary. If you want to use it as a client in an existing WLAN, you have to change the IP adresses according to your local needs.
 
-The sketch is implementing mDNS and the Bonjour protocol. In a web clinet you can simply provide the name "gateway.local). Then the initial web site is shown:
+The sketch is implementing mDNS and the Bonjour protocol. In a web clinet you can simply provide the name "gateway.local". Then the initial web site is shown:
 
 ![MainPage](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/MainPage.png)
 
