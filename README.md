@@ -1,8 +1,9 @@
 # NMEA2000 WiFi-Gateway - My Boat Edition
 
-This project is a combination of three of mine other GitHub projects. It combine the [NMEA2000 WiFi-Gateway](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) with the Sonoff/Tasmota [power meter](https://github.com/AK-Homberger/M5Stack-Sonoff-Power-Display) and the [heater control](https://github.com/AK-Homberger/WLAN-Controlled-Heater-Thermostat-for-Tasmota-switch) project.
+This project is a combination of three of mine other GitHub projects. It combines the [NMEA2000 WiFi-Gateway](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) with the Sonoff/Tasmota [power meter](https://github.com/AK-Homberger/M5Stack-Sonoff-Power-Display) and the [heater control](https://github.com/AK-Homberger/WLAN-Controlled-Heater-Thermostat-for-Tasmota-switch) project.
 
 The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. 
+
 The same hardware and PCB as for the Gateway is used. We only need one addional DS18B20 temperature sensor for the room temperature.
 
 And of course the Sofoff POW and a Tasmota switch to control the heater. That's all.
@@ -50,20 +51,28 @@ const char* TasmotaIP = "192.168.15.200"; // Defines address of Tasmota heater s
 
 It's important to configure the Sonoff POW R2 and the Tasmota heater switch with the above defined IP adresses. I'm using the sketch as Access Point and in that case no changes to IP adresses in the sketch should be necessary. If you want to ue it as a client in an existing WLAN you have to chnge the IP adresses according to your local needs.
 
-The sketch is implementing mDNS and the Bonjour protocl. In a web clinet you can simply provide the name "gateway.local). Then the initial web site is shown:
+The sketch is implementing mDNS and the Bonjour protocol. In a web clinet you can simply provide the name "gateway.local). Then the initial web site is shown:
 
 ![MainPage](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/MainPage.png)
 
-With thgis main page you can access the other web pages to:
+With this main page you can access the other web pages to:
 
 - Show navigation information
 - Control the power supply
 - Control the heater thermostat
 - Show wind information (big)
 
+
+The navigatio web page shows essetial naigationl data received from the NMEA2000 network. No additional client app is needed on the phone/tablet or laptop.
+
 ![Navigation](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/Navigation.png)
 
+
+The poer control web page shows information regardin the Board Voltage (12Volt), the fridge remperatur and the mains power status.
+
 ![Power](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/PowerControl.png)
+
+You can also switch on/off the alarm for mains power losses.
 
 ![Heater](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/HeaterControl.png)
 
