@@ -109,7 +109,7 @@ Just set the index in "sensors.getTempCByIndex(1)" to "0" or "1". It would be po
 The last page is just showing the current AWS and the maximum wind speed.
 ![Wind](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/AWS-Big.png)
 
-# Other Apps / Connction Tips
+# Other Apps / Mobile Connection
 I'm using the gateway together with a [Navionics boating app](https://www.navionics.com/deu/apps/navionics-boating) and a [logbook app](https://logbook-app.com/de/) on my tablet.
 For both apps the tcp connection via port 2222 works great.
 
