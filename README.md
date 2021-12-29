@@ -4,7 +4,7 @@ This project is a combination of three of mine other GitHub projects. It combine
 
 The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. The gateway functions are controlled with a web browser.
 
-The same hardware and PCB as for the gateway is used. We only need one additional DS18B20 temperature sensor for the room temperature. The same libraries as for the gateway are needed. Just follow the instructions from the gateway GitHub project.
+The same hardware and PCB as for the gateway is used. We only need one additional DS18B20 temperature sensor for the room temperature. The same libraries as for the gateway are needed. Just follow the instructions from the gateway GitHub project, but use [this software](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/tree/main/NMEA2000-Gateway-MBE) in the Arduino IDE.
 
 And of course the Sonoff POW R2 and a Tasmota switch to control the heater. That's all.
 On both devices the Tasmota software has to be installed. For details please have a look to the individual GitHub project pages.
