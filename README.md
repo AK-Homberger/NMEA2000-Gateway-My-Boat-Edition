@@ -8,7 +8,7 @@ The same hardware and PCB as for the gateway is used. We only need one additiona
 
 The same libraries as for the gateway are needed. Just follow the instructions from the gateway GitHub project, but use [this software](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/tree/main/NMEA2000-Gateway-MBE) in the Arduino IDE.
 
-If you want to change the software according to you own needs then the information in the [NMEA2000 Workshop](https://github.com/AK-Homberger/NMEA2000-Workshop) might be usefull for you.
+If you want to change the software according to you own needs, then the information in the [NMEA2000 Workshop](https://github.com/AK-Homberger/NMEA2000-Workshop) might be usefull for you.
 
 
 ## Settings
