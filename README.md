@@ -104,3 +104,16 @@ Just set the index in "sensors.getTempCByIndex(1)" to "0" or "1". It would be po
 The last page is just showing the current AWS and the maximum wind speed.
 ![Wind](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/AWS-Big.png)
 
+# Other Apps / Tips
+
+I'm using the gateway together with a Navionics app and a [logbook app](https://logbook-app.com/de/) on my tablet.
+For both apps the tcp connection via port 2222 works great.
+
+But especially for the logbook app functionality (e.g. Geoencoding and weather) it's important that the tablat can use the mobile connection in addition to the access point connection.
+
+At least for Apple devices there is a simple trick: Just configure the gateway AP with a fixed IP address (e.g. 192.168.15.2) and no gateway.
+That ensures that the phone/tablet can use a mobile connection further in parallel.
+
+
+
+
