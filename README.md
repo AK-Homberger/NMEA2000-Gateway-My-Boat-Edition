@@ -113,7 +113,7 @@ The last page is just showing the current AWS and the maximum wind speed.
 
 # Other Apps / Mobile Connection
 I'm using the gateway together with a [Navionics boating app](https://www.navionics.com/deu/apps/navionics-boating) and a [logbook app](https://logbook-app.com/de/) on my tablet.
-For both apps the tcp connection via port 2222 works great.
+For both apps the NMEA0183 over tcp connection via port 2222 works great.
 
 But especially for the logbook app functionality (e.g. geoencoding and weather) it's important that the tablet can use the mobile connection in addition to the access point connection.
 
