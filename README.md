@@ -9,6 +9,7 @@ The same hardware and PCB as for the gateway is used. We only need one additiona
 And of course the Sonoff POW R2 and a Tasmota switch to control the heater. That's all.
 On both devices the Tasmota software has to be installed. For details please have a look to the individual GitHub project pages.
 
+## Settings
 To adjust the program to your needs, you can change the settings in the sketch:
 ```
 //****************************************************************************************
@@ -52,6 +53,7 @@ const char* TasmotaIP = "192.168.15.200"; // Defines address of Tasmota heater s
 
 It's important to configure the Sonoff POW R2 and the Tasmota heater switch with the above defined IP adresses. I'm using the sketch as Access Point and in that case no changes of IP adresses in the sketch should be necessary. If you want to use it as a client in an existing WLAN, you have to change the IP adresses according to your local needs.
 
+## Main Page
 The sketch is implementing mDNS and the Bonjour protocol. In a web client you can simply provide the name "gateway.local". Then the initial web page is shown:
 
 ![MainPage](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/MainPage.png)
@@ -64,17 +66,20 @@ With this main page you can access the other web pages to:
 - Show wind information (big)
 
 
+## Navigation Data Page
 The navigation web page shows essential navigational data received from the NMEA2000 network. No additional client app is needed on the phone/tablet or laptop.
 
 ![Navigation](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/Navigation.png)
 
 
+## Power Control Page
 The power control web page shows information regarding the board voltage (12 Volt), the fridge temperatur and the mains power values.
 
 ![Power](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/PowerControl.png)
 
 You can also switch on/off the alarm for mains power losses. And you can also reset the power usage value to zero.
 
+## Heater Control Page
 With the heater control page you can control the heater.
 ![Heater](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/HeaterControl.png)
 
@@ -100,11 +105,11 @@ tmp = sensors.getTempCByIndex(1);      // First sensor
 
 Just set the index in "sensors.getTempCByIndex(1)" to "0" or "1". It would be possible to identify the individual sensor by the unique ID. But for only two sensors it's easier to just try out the two options with the index.
 
-
+## Wind Page (Big)
 The last page is just showing the current AWS and the maximum wind speed.
 ![Wind](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/AWS-Big.png)
 
-# Other Apps / Tips
+# Other Apps / Connction Tips
 
 I'm using the gateway together with a Navionics app and a [logbook app](https://logbook-app.com/de/) on my tablet.
 For both apps the tcp connection via port 2222 works great.
