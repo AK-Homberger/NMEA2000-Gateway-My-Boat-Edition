@@ -1,8 +1,8 @@
 # NMEA2000 WiFi-Gateway - My Boat Edition
 
-This project is a combination of three of mine other GitHub projects. It combines the [NMEA2000 WiFi-Gateway](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) with the Sonoff/Tasmota [power meter](https://github.com/AK-Homberger/M5Stack-Sonoff-Power-Display) and the [heater control](https://github.com/AK-Homberger/WLAN-Controlled-Heater-Thermostat-for-Tasmota-switch) project.
+This project is a combination of three of mine other GitHub projects. It combines the [NMEA2000 WiFi-Gateway](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) with the Sonoff/Tasmota [power meter](https://github.com/AK-Homberger/M5Stack-Sonoff-Power-Display) and the [heater control](https://github.com/AK-Homberger/WLAN-Controlled-Heater-Thermostat-for-Tasmota-switch) project. That's the combination I'm using curently on my boat.
 
-The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. 
+The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. The gateway functions are controlled with a web browser.
 
 The same hardware and PCB as for the gateway is used. We only need one additional DS18B20 temperature sensor for the room temperature.
 
@@ -73,11 +73,11 @@ The navigation web page shows essential navigational data received from the NMEA
 
 
 ## Power Control Page
-The power control web page shows information regarding the board voltage (12 Volt), the fridge temperatur and the mains power values.
+The power control web page shows information regarding the board voltage (12 Volt), the fridge temperature and the mains power values.
 
 ![Power](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/PowerControl.png)
 
-You can also switch on/off the alarm for mains power losses. And you can also reset the power usage value to zero.
+You can also switch on/off the alarm for mains power losses. And you can also reset the energy value to zero.
 
 ## Heater Control Page
 With the heater control page you can control the heater.
