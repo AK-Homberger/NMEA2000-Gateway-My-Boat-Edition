@@ -112,12 +112,12 @@ The last page is just showing the current AWS and the maximum wind speed.
 ![Wind](https://github.com/AK-Homberger/NMEA2000-Gateway-My-Boat-Edition/blob/main/Pictures/AWS-Big.png)
 
 # Other Apps / Mobile Connection
-On my boat, I use a [Raymarine NMEA2000 network](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Start.md#kabelplan) with sveral instruments and an MFD (eS75). The gateway is connected to the NMEA2000 network.
+On my boat, I use a [Raymarine NMEA2000 network](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Start.md#kabelplan) with several instruments and an MFD (eS75). The gateway is connected to the NMEA2000 network.
 
 I'm using the gateway together with a [Navionics boating app](https://www.navionics.com/deu/apps/navionics-boating) and a [logbook app](https://logbook-app.com/de/) on my tablet  in the cabin (split screen). For both apps the NMEA0183 over tcp connection via port 2222 works great.
 
 But especially for the logbook app functionality (e.g. geoencoding and weather information) it's important that the tablet can use the mobile connection in addition to the access point connection.
 
 At least for Apple devices there is a simple trick: Just configure the gateway AP with a fixed IP address (e.g. 192.168.15.2) and no gateway.
-In that case that the phone/tablet can use a mobile connection further in parallel.
+In that case the phone/tablet can use a mobile connection further in parallel.
 
