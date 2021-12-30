@@ -2,7 +2,7 @@
 
 This project is a combination of three of my other GitHub projects. It combines the [NMEA2000 WiFi-Gateway](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) with the Sonoff/Tasmota [power meter](https://github.com/AK-Homberger/M5Stack-Sonoff-Power-Display) and the [heater control](https://github.com/AK-Homberger/WLAN-Controlled-Heater-Thermostat-for-Tasmota-switch) project. That's the combination I'm using currently on my boat.
 
-The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini fom the other projects. The gateway functions are controlled with a web browser.
+The ESP32 DevModule of the gateway hardware is replacing the M5Stack and the D1-Mini of the other projects. The gateway functions are controlled with a web browser.
 
 The same hardware and PCB as for the gateway is used. We only need one additional DS18B20 temperature sensor for the room temperature. And of course the Sonoff POW R2 as power meter and a Tasmota switch to control the heater. On both devices the [Tasmota](https://tasmota.github.io/docs/) software has to be installed. For details please have a look to the individual GitHub project pages.
 
